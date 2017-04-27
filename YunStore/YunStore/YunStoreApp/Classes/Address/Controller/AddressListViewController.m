@@ -6,6 +6,7 @@
 //  Copyright © 2017年 yangye. All rights reserved.
 //
 
+
 #import "AddressListViewController.h"
 #import "AddressTableViewCell.h"
 #import "AddAddressViewController.h"
@@ -23,28 +24,28 @@
     [super viewDidLoad];
     self.navigationItem.title=@"地址管理";
     
-
+    
     if (self.addressList.count>0) {
         
         [self createTableView];
-
+        
         self.addAddressButn.backgroundColor=RGBCOLOR(232, 80, 45);
         self.addAddressButn.frame=CGRectMake(15, kScreenHeight-150, kScreenWidth-30, 50);
         
     }else{
         self.addAddressButn.backgroundColor=RGBCOLOR(221, 221, 221);
-        self.addAddressButn.frame=CGRectMake(50,( kScreenHeight-50)/2, kScreenWidth-100, 50);
+        self.addAddressButn.frame=CGRectMake(50,kScreenHeight/2-50, kScreenWidth-100, 50);
     }
-
+    
     [self.view addSubview:self.addAddressButn];
     [self.view insertSubview:self.addAddressButn atIndex:0];
 }
 
 -(UIButton *)addAddressButn{
-    if (_addAddressButn) {
+    if (_addAddressButn==nil) {
         _addAddressButn=[UIButton buttonWithType:UIButtonTypeCustom];
         [self.addAddressButn setTitle:@"+新建地址" forState:UIControlStateNormal];
-    [self.addAddressButn addTarget:self action:@selector(addAddressClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.addAddressButn addTarget:self action:@selector(addAddressClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _addAddressButn;
 }
@@ -57,9 +58,9 @@
     [self.view addSubview:self.addressTableView];
 }
 -(void)addAddressClick:(UIButton *)butn{
-                AddAddressViewController *addAddressVC=[[AddAddressViewController alloc]init];
-                [self.navigationController pushViewController:addAddressVC animated:YES];
-
+    AddAddressViewController *addAddressVC=[[AddAddressViewController alloc]init];
+    [self.navigationController pushViewController:addAddressVC animated:YES];
+    
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 3;
