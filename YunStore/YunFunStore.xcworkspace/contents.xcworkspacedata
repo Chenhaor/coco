@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:YunStore/YunStoreApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:GWCache/GWCache.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:GWNetworkKits/GWNetworkKits.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:GWLogListTest/GWLogListTest.xcodeproj">
+   </FileRef>
+</Workspace>
