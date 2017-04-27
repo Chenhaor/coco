@@ -60,6 +60,7 @@ static NSString *cellId=@"CollectionViewID";
         [butn setTitleColor:RGBCOLOR(235, 97, 57) forState:UIControlStateSelected];
         [butn setTitleColor:RGBCOLOR(115, 115, 115) forState:UIControlStateNormal];
         butn.tag=1300+a;
+        butn.titleLabel.font=[UIFont systemFontOfSize:14];
         [butn addTarget:self action:@selector(butnClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.butnArray addObject:butn];
     }
@@ -217,12 +218,12 @@ static NSString *cellId=@"CollectionViewID";
     SingleAddress *singleAddr=[SingleAddress shareAddress];
     NSMutableArray *array=singleAddr.addressArray;
     self.scrollCollectionView.contentOffset=CGPointMake(MIN(array.count, 3)*kScreenWidth, 0);
-    [self butnSelected:MIN(array.count+1,4)];
+    [self butnSelected:MIN(array.count,3)];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
-    NSInteger a = scrollView.contentOffset.y/kScreenWidth;
+    NSInteger a = scrollView.contentOffset.x/kScreenWidth;
     [self butnSelected:a];
 }
 
@@ -231,7 +232,7 @@ static NSString *cellId=@"CollectionViewID";
         UIButton *allButn=[self viewWithTag:1300+a];
         if (butnTag==a) {
             allButn.selected=YES;
-            _scrollLayer.frame=CGRectMake((a-1)*60, 99, 60, 1);
+            _scrollLayer.frame=CGRectMake(a*60, 99, 60, 1);
         }else{
             allButn.selected=NO;
         }

@@ -117,13 +117,12 @@ static NSString * const tabViewCellID=@"tabViewCellID";
     
     _classTableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 100, kScreenHeight-kNaviHeight-kTabbarHeight)];
     NSIndexPath *indexPath=[NSIndexPath indexPathForRow:0 inSection:0];
-    [_classTableView deselectRowAtIndexPath:indexPath animated:YES];
-    
     _classTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     _classTableView.dataSource=self;
     _classTableView.delegate=self;
     [self.view addSubview:_classTableView];
     
+    [_classTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionNone];
     
     _detailsTableView=[[UITableView alloc]initWithFrame:CGRectMake(110, 0, kScreenWidth-110, kScreenHeight-kNaviHeight-kTabbarHeight) style:UITableViewStyleGrouped];
                        

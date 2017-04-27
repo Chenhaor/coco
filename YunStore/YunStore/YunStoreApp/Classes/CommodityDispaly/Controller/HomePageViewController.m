@@ -75,9 +75,8 @@ static NSString *const activityCellID=@"activityCellID";
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"homeTabBarBack"] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     
-    self.navigationController.navigationBar.barStyle=UIBarStyleBlackOpaque;
+//    self.navigationController.navigationBar.barStyle=UIBarStyleBlackOpaque;
 //        [self.navigationController.navigationBar setBackgroundColor:[UIColor whiteColor]];
-    
     _barImageView = self.navigationController.navigationBar.subviews.firstObject;
     _barImageView.alpha=0.6;
     

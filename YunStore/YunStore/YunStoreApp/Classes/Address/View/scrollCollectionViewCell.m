@@ -8,6 +8,8 @@
 
 #import "scrollCollectionViewCell.h"
 #import "SingleAddress.h"
+#import "AddressTitleTableViewCell.h"
+
 @interface scrollCollectionViewCell ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic, strong)UITableView *tableView;
 @end
@@ -43,11 +45,11 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellID=@"cellIdentifier";
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellID];
+    AddressTitleTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellID];
     if (cell==nil) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell=[[AddressTitleTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
-    cell.textLabel.text=self.addressArray[indexPath.row];
+    cell.addressLabel.text=self.addressArray[indexPath.row];
     return cell;
 }
 
@@ -66,5 +68,6 @@
     if (self.choiceAddress) {
         _choiceAddress(self.addressArray[indexPath.row]);
     }
+    [self.tableView reloadData];
 }
 @end

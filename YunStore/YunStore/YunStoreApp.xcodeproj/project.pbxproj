@@ -360,6 +360,7 @@
 		18EF8EBA1EADDC6B00FD5A28 /* me_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EF8EB61EADDC6B00FD5A28 /* me_setting@2x.png */; };
 		18EF8EBC1EADDF0600FD5A28 /* me_headBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EF8EBB1EADDF0600FD5A28 /* me_headBack@2x.png */; };
 		18EF8EBE1EADE8F200FD5A28 /* me_NavBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EF8EBD1EADE8F200FD5A28 /* me_NavBar@2x.png */; };
+		87743D951EB24B6A0013C4B3 /* AddressTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87743D941EB24B6A0013C4B3 /* AddressTitleTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -935,6 +936,8 @@
 		18EF8EB61EADDC6B00FD5A28 /* me_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me_setting@2x.png"; sourceTree = "<group>"; };
 		18EF8EBB1EADDF0600FD5A28 /* me_headBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me_headBack@2x.png"; sourceTree = "<group>"; };
 		18EF8EBD1EADE8F200FD5A28 /* me_NavBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me_NavBar@2x.png"; sourceTree = "<group>"; };
+		87743D931EB24B6A0013C4B3 /* AddressTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressTitleTableViewCell.h; sourceTree = "<group>"; };
+		87743D941EB24B6A0013C4B3 /* AddressTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressTitleTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1038,6 +1041,8 @@
 				1894D27D1EB1978800CC3CF1 /* ChoiceAddressBackView.m */,
 				1894D27F1EB1990800CC3CF1 /* scrollCollectionViewCell.h */,
 				1894D2801EB1990800CC3CF1 /* scrollCollectionViewCell.m */,
+				87743D931EB24B6A0013C4B3 /* AddressTitleTableViewCell.h */,
+				87743D941EB24B6A0013C4B3 /* AddressTitleTableViewCell.m */,
 				1894D28E1EB1F82800CC3CF1 /* AddressTableViewCell.h */,
 				1894D28F1EB1F82800CC3CF1 /* AddressTableViewCell.m */,
 			);
@@ -2604,6 +2609,7 @@
 				18E1D9681EB0893400E8CC91 /* GWCustomInputView.m in Sources */,
 				18E1D94F1EB081CE00E8CC91 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				18AA72D91EADEBB100085C0B /* UIImage+MultiFormat.m in Sources */,
+				87743D951EB24B6A0013C4B3 /* AddressTitleTableViewCell.m in Sources */,
 				18E9D9D71EAF646900F2F6F8 /* TagView.m in Sources */,
 				18AA72D41EADEBB100085C0B /* SDWebImageDownloaderOperation.m in Sources */,
 				189925DE1EA8866800BCF2B3 /* WidgetInitObject.m in Sources */,
